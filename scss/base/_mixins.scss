@@ -1,0 +1,59 @@
+// Web fonts
+@mixin font-face($family, $file) {
+  @font-face {
+    font-family: $family;
+    // src: url('#{$path-font}/#{$file}-webfont.eot');
+    // src: url('#{$path-font}/#{$file}-webfont.eot?#iefix') format('embedded-opentype'),
+    //      url('#{$path-font}/#{$file}-webfont.woff') format('woff'),
+        src: url('#{$path-font}/#{$file}-webfont.ttf') format('truetype');
+  }
+}
+
+
+// Text
+@mixin text($size, $l-height: null, $weight: null, $color: null) {
+  font-size: $size;
+  line-height: $l-height;
+  font-weight: $weight;
+  color:$color; 
+}
+
+// Border radius
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+// Transition
+@mixin transition($transition){
+  -webkit-transition: all $transition ease-in-out;
+     -moz-transition: all $transition ease-in-out;
+       -o-transition: all $transition ease-in-out;
+          transition: all $transition ease-in-out;
+}
+
+// Box Shadow
+@mixin box-shadow(){
+  -webkit-box-shadow: 2px 2px 5px rgba(0,0,0,.2);
+     -moz-box-shadow: 2px 2px 5px rgba(0,0,0,.2);
+      -ms-box-shadow: 2px 2px 5px rgba(0,0,0,.2);
+       -o-box-shadow: 2px 2px 5px rgba(0,0,0,.2);
+          box-shadow: 2px 2px 5px rgba(0,0,0,.2);
+}
+
+// Triangle Bottom
+@mixin triangle-bottom($range){
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  right: 0%;
+  width: 100%;
+  height: 0;
+  border-top: solid 49px $range;
+  border-left: solid 45em transparent;
+  border-right: solid 45em transparent;
+  z-index: 99;
+}

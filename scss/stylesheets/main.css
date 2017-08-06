@@ -1,0 +1,57 @@
+/*--------------------------------------------------
+ Company    : PT. CORPORATE PROFILE PROFESIONAL
+ Document   : SCSS Main Global
+ Date 			: 30 JULI 2017
+ Author     : Fathan Rohman, S.T - fathan.github.io
+ --------------------------------------------------*/
+
+/* -------------------
+   ---- PLUGIN ---
+   ------------------- */
+
+@import "stylesheets/plugin/bootstrap.min";
+@import "stylesheets/plugin/jasny-bootstrap.min";
+@import "stylesheets/plugin/font-awesome";
+@import "stylesheets/plugin/animate.min";
+@import "stylesheets/plugin/owl.carousel";
+@import "stylesheets/plugin/jquery.fancybox.min";
+@import "stylesheets/plugin/select2.min";
+@import "stylesheets/plugin/select2-bootstrap.min";
+
+/* -------------------
+   ---- GLOBAL ---
+   ------------------- */
+
+@import "stylesheets/global/fonts";
+@import "stylesheets/global/variabel";
+@import "stylesheets/global/mixins";
+@import "stylesheets/global/extend_inheritance";
+@import "stylesheets/global/global";
+@import "stylesheets/global/button";
+@import "stylesheets/global/color";
+@import "stylesheets/global/background";
+@import "stylesheets/global/header";
+@import "stylesheets/global/footer";
+
+/* -------------------
+   ---- SECTION ---
+   ------------------- */
+
+@import "stylesheets/section/bootstrap";
+@import "stylesheets/section/home";
+@import "stylesheets/section/features";
+@import "stylesheets/section/partner";
+@import "stylesheets/section/static_page";
+@import "stylesheets/section/contact_us";
+@import "stylesheets/section/blog";
+@import "stylesheets/section/authentication";
+@import "stylesheets/section/pricing";
+@import "stylesheets/section/career";
+@import "stylesheets/section/about_us";
+@import "stylesheets/section/card";
+
+/* -------------------
+   ---- RESPONSIVE ---
+   ------------------- */
+
+@import "stylesheets/responsive/main-responsive";

@@ -28,6 +28,14 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.scss$/,
+        loader: ["style", "css", "sass"]
+      },
+      {
+        test: /\.jade$/,
+        loader: ["style", "jade"]
+      },
+      {
         test: /\.(js|vue)$/,
         loader: 'eslint-loader',
         enforce: 'pre',

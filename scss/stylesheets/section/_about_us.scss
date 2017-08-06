@@ -1,0 +1,46 @@
+.team-wrapper{
+	width: 100%;
+	display: inline-block;
+
+	.team-list-wrapper{
+		margin-top: 50px;
+
+		.box-team-list{
+			width: 100%;
+			display: inline-block;
+			margin-bottom: 20px;
+			text-align: center;
+
+			.avatar{
+				width: 150px;
+				height: 150px;
+				margin: auto;
+				display: table;
+				overflow: hidden;
+				margin-bottom: 20px;
+				border-radius: 50%;
+
+				img{
+					width: 100%;
+					height: auto;
+				}
+			}
+
+			.name{
+				font-family: 'Poppins', sans-serif;
+				font-weight: 400;
+				font-size: 16px;
+				color: $color-black;
+				margin-bottom: 10px;
+			}
+
+			.position{
+				font-family: 'Poppins', sans-serif;
+				font-weight: 300;
+				font-size: 14px;
+				color: $mbz-green-1;
+				margin-bottom: 10px;
+			}
+		}
+	}
+}

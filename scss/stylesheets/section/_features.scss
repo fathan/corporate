@@ -1,0 +1,51 @@
+.box-features{
+	width: 100%;
+	display: inline-block;
+
+	.title{
+		font-size: 22px;
+		font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: $color-black;
+	}
+
+	.description{
+		font-size: 14px;
+		font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    line-height: 25px;
+    color: $color-black;
+    margin-bottom: 20px;
+	}
+
+	.box-list-point{
+		width: 100%;
+		display: inline-block;
+
+		ul{
+			padding-left: 0;
+
+			li{
+				list-style: none;
+				margin-bottom: 10px;
+
+				i{
+					color: $mbz-green-1;
+					font-size: 1.5em;
+				}
+			}
+		}
+	}
+
+	.img-content{
+		width: 100%;
+		height: auto;
+		overflow: hidden;
+
+		img{
+			width: 100%;
+			height: auto;
+		}
+	}
+}

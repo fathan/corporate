@@ -1,0 +1,129 @@
+.pricing-wrapper{
+	width: 100%;
+	display: inline-block;
+
+	.group-box-pricing{
+		width: 100%;
+		display: inline-block;
+		margin-top: 50px;
+
+		.aside__point__pricing{
+			width: 20%;
+			float: left;
+
+			.box--title{
+				width: 100%;
+				padding: 20px;
+				padding-left: 0px;
+				padding-bottom: 62px;
+				display: inline-block;
+
+				.title{
+					font-family: 'Poppins', sans-serif;
+					font-weight: 600;
+					font-size: 18px;
+					color: $color-black;
+					text-transform: capitalize;
+				}
+			}
+
+			.box--list-point-name{
+				width: 100%;
+				display: inline-block;
+
+				.point-name{
+					height: 59.9px;
+					padding: 20px;
+	        padding-left: 0px;
+	        border-bottom: 1px solid #ececec;
+	        width: 100%;
+	        display: inline-block;
+
+	        &:first-child{
+	        	border-top: 1px solid #ececec;
+	        }
+
+					span{
+						font-family: 'Poppins', sans-serif;
+						font-weight: 400;
+						font-size: 14px;
+						color: #aaaaaa;
+					}
+				}
+			}
+		}
+
+		.content__point__pricing{
+			overflow-x: auto;
+			width: 80%;
+			float: right;
+			background-color: $color-white;
+			border: 2px solid #ececec;
+			display: inline-block;
+			border-radius: 5px;
+
+			.list--content--point--wrapper{
+				display: table-cell;
+				background-color: $color-white;
+				@include transition(0.4s);
+
+				&:hover{
+					background: #f6f7fa;
+					@include transition(0.4s);
+				}
+
+				.box--title{
+					width: 227px;
+					padding: 20px;
+					border-bottom: 1px solid #ececec;
+					text-align: center;
+
+					.title{
+						font-family: 'Poppins', sans-serif;
+						font-weight: 600;
+						font-size: 18px;
+						color: $color-black;
+						text-transform: capitalize;
+						margin-bottom: 15px;
+					}
+
+					.pricing{
+						font-family: 'Poppins', sans-serif;
+						font-weight: 600;
+						font-size: 18px;
+						color: #d75a4a;
+						text-transform: capitalize;
+					}
+				}
+
+				.box--list-check{
+					width: 227px;
+					height: 59.8px;
+					padding: 20px;
+					border-bottom: 1px solid #ececec;
+					text-align: center;
+
+					.check{
+						background: url(../images/gallery/check.png) no-repeat;
+		        width: 25px;
+		        height: 25px;
+		        display: inline-block;
+					}
+
+					.uncheck{
+						background: url(../images/gallery/times.png) no-repeat;
+		        width: 25px;
+		        height: 25px;
+		        display: inline-block;
+					}
+				}
+
+				.box--list-action{
+					width: 227px;
+					padding: 20px;
+					text-align: center;
+				}
+			}
+		}
+	}
+}

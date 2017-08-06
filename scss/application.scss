@@ -1,0 +1,17 @@
+/*--------------------------------------------------
+ Company    : PT. CORPORATE PROFILE PROFESIONAL
+ Document   : SCSS Main Global
+ Date 			: 30 JULI 2017
+ Author     : Fathan Rohman, S.T - http://fathan.github.io
+ --------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Muli|Open+Sans:300,400,700');
+
+// ========================================================
+// Global Imports
+// ========================================================
+@import "plugin/index";
+@import "base/index";
+@import "layout/index";
+@import "components/index";
+@import "responsive/index";

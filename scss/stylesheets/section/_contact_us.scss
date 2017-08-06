@@ -1,0 +1,49 @@
+#map{
+	width: 100%;
+	height: 600px;
+	display: inline-block;
+	background-color: #333333;
+	margin-bottom: -5px;
+}
+
+.contact-us-wrapper{
+	width: 100%;
+	display: inline-block;
+	margin-top: -10em;
+	margin-bottom: 50px;
+
+	.box-content-contact{
+		width: 100%;
+		display: inline-block;
+		margin-top: 13em;
+
+		.title{
+			font-size: 16px;
+			font-family: 'Poppins', sans-serif;
+			font-weight: 600;
+			margin-bottom: 10px;
+			color: $mbz-green-1;
+			text-transform: uppercase;
+		}
+
+		p{
+			font-size: 14px;
+			font-family: 'Poppins', sans-serif;
+			font-weight: 300;
+			margin-bottom: 40px;
+			color: #333333;
+			line-height: 25px;
+		}
+
+		span{
+			width: 100%;
+			display: inline-block;
+			font-size: 14px;
+			font-family: 'Poppins', sans-serif;
+			font-weight: 300;
+			margin-bottom: 10px;
+			color: #333333;
+			line-height: 20px;
+		}
+	}
+}

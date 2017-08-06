@@ -1,0 +1,134 @@
+.navbar-desktop{
+	display: block;
+	margin-top: -5px;
+
+	.navbar {
+	  position: relative;
+	  min-height: 50px;
+	  margin-top: -1px;
+	  margin-bottom: 0px;
+	  border: 0px solid transparent;
+	  border-radius: 0px!important;
+		box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+	}
+
+	.navbar-default {
+	  background-color: $mbz-blue-1;
+	  border-color: transparent;
+
+	  .navbar-brand{
+	  	img{
+	  		margin-top: 10px;
+	  	}
+	  }
+
+		.navbar-nav > li > a {
+		  color: rgba(255,255,255,.7);
+      text-transform: capitalize;
+      font-size: 14px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      padding: 30px 20px;
+      border-bottom: 3px solid transparent;
+		
+      &:hover{
+      	color: $color-white;
+      	border-bottom: 3px solid $color-white;
+      }
+
+      &.active{
+      	color: $color-white;
+      	border-bottom: 3px solid $color-white;
+      }
+		}
+
+		.navbar-nav{
+			.padding-right-0{
+				padding-right: 0px;
+			}
+		}
+
+		.navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover {
+		  color: $color-white;
+		  background-color: transparent;
+		}
+
+		.navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+			background-color: transparent;
+		}
+	}
+
+	.dropdown-menu{
+		border-radius: 0px;
+
+		> li > a {
+		  display: block;
+		  padding: 10px 20px;
+		  border-bottom: 1px dashed #f3f2f2;
+		}
+	}
+}
+
+.form-control{
+	border-radius: 3px;
+	color: #afafaf;
+  font-family: open-sans-light;
+  border: 1px solid #e6e6e6;
+  font-size: 12px;
+
+	&:focus {
+	  border-color: #26a69a;
+	  outline: 0;
+	  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgb(38, 166, 154);
+	  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(38, 166, 154, 0.09);
+	}
+}
+
+.pagination > li > a, .pagination > li > span {
+	margin-left: 10px;
+}
+
+.pagination > li > a:focus, .pagination > li > a:hover, .pagination > li > span:focus, .pagination > li > span:hover {
+  z-index: 2;
+  color: #ffffff;
+  background-color: #265ba6;
+  border-color: #265ba6;
+}
+
+.pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
+  z-index: 3;
+  color: #fff;
+  cursor: default;
+  background-color: #265ba6;
+  border-color: #265ba6;
+}
+
+.btn{
+	border-radius: 1px;
+	font-size: 12px;
+	font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  padding: 10px 40px;
+}
+
+.btn-primary{
+	background-color: $mbz-blue-1;
+	border: 1px solid $mbz-blue-1;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+.btn-success{
+	background-color: $mbz-green-1;
+	border: 1px solid $mbz-green-1;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+.btn-default{
+	background: $color-white;
+	border: 1px solid rgba(158,158,158,.2);
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+.panel{
+	border: 0px;
+}

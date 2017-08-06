@@ -1,0 +1,17 @@
+.box-wrapper{
+	display: inline-block;
+	width: 100%;
+}
+
+.no-shadow-flat{
+	box-shadow: rgba(0, 0, 0, 0.137255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.2) 0px 0px 0px 0px, rgba(0, 0, 0, 0.117647) 0px 0px 0px 0px;
+}
+
+.opacity-white-image{
+	background-color: $color-white;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: 0.8;
+}

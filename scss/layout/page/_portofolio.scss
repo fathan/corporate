@@ -1,0 +1,45 @@
+.list-portofolio{
+	@extend .inline-block;
+	margin-bottom: 30px;
+
+	.list-portofolio__image{
+		position: relative;
+		overflow: hidden;
+		width: 100%;
+		height: 230px;
+		box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+
+		img{
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	.box-description{
+		position: absolute;
+		left: 10px;
+		bottom: 10px;
+
+		.title{
+			background-color: $blue-1;
+			color: $white;
+			font-size: 16px;
+			font-family: $stack-muli;
+			font-weight: 700;
+			padding: 10px;
+			padding-bottom: 25px;
+		}
+
+		.type{
+			background-color: $yellow;
+			color: $blue-1;
+			font-size: 14px;
+			font-family: $stack-muli;
+			font-weight: 400;
+			padding: 5px;
+			margin-left: 10px;
+      margin-top: -15px;
+      float: left;
+		}
+	}
+}

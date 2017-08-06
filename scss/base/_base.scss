@@ -1,0 +1,106 @@
+body{
+	font-family: $stack-open-sans;
+	font-weight: 400;
+}
+
+.body--wrapper{
+	overflow: hidden;
+}
+
+.title--top{
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+
+	.title{
+		color: $black;
+		font-size: 30px;
+		font-family: $stack-muli;
+		font-weight: 700;
+		margin-bottom: 40px;
+		text-transform: uppercase;
+	}
+
+	.description{
+		color: $black;
+		font-size: 18px;
+		font-family: $stack-muli;
+		font-weight: 300;
+		margin-bottom: 40px;
+	}
+}
+
+.section--wrapper{
+	@extend .inline-block;
+	padding: 50px 0px;	
+}
+
+.mg-bottom-diagonal{
+	margin-bottom: 10em;
+}
+
+.sub--header{
+	display: block;
+	width: 100%;
+	background-color: $red-2;
+	padding: 80px 0px;
+	position: relative;
+
+	&.diagonal-shadow::before, 
+	&.diagonal-shadow::after {
+	  position: absolute;
+	  content: '';
+	  pointer-events: none;
+	}
+
+	&.diagonal-shadow::before {
+		height: 41%;
+		-webkit-transform: rotate(-3deg);
+		transform: rotate(-7deg);
+		-webkit-transform-origin: 3% 0;
+		transform-origin: 3% 0;
+	}
+
+	&.diagonal-shadow::before, 
+	.diagonal-shadow::after {
+	  bottom: -8em;
+    left: -12px;
+    width: 103%;
+    height: 35%;
+    background: inherit;
+    -webkit-transform: rotate(-2deg);
+    transform: rotate(-3deg);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+	}
+
+	.box-desc{
+		@extend .inline-block;
+
+		.title{
+			@extend .inline-block;
+			margin-bottom: 30px;
+			font-size: 30px;
+			font-weight: bold;
+			color: $white;
+			text-transform: uppercase;
+			font-family: $stack-muli;
+      font-weight: 700;
+		}
+
+		.description{
+			@extend .inline-block;
+			margin-bottom: 30px;
+			font-size: 18px;
+			color: $white;
+			font-family: $stack-muli;
+      font-weight: 300;
+		}
+	}
+}
+
+// INHERITANCE
+.inline-block{
+	width: 100%;
+	display: block;
+}

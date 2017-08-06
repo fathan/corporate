@@ -1,0 +1,138 @@
+.block-static-page-wrapper{
+	width: 100%;
+	display: inline-block;
+
+	.block-content-static-page{
+		width: 100%;
+		display: block;
+		background-color: $mbz-green-2;
+		margin-bottom: 30px;
+		padding-top: 25px;
+		height: 400px;
+
+		&.block-content-for-faq{
+			margin-bottom: 0px!important;
+			height: 100%;
+		}
+
+		.content-wrapper{
+			width: 100%;
+			display: inline-block;
+			padding: 30px;
+			background: $color-white;
+			border-radius: 3px;
+			margin-bottom: 80px;
+
+			.title-top{
+				display: block;
+				font-family: 'Poppins', sans-serif;
+				font-weight: 400;
+				color: $color-black;
+				margin-bottom: 70px;
+				font-size: 25px;
+			}
+
+			.title{
+				display: block;
+				font-size: 16px;
+				font-family: 'Poppins', sans-serif;
+				font-weight: 400;
+				color: $color-black;
+				margin-bottom: 15px;
+			}
+
+			.introduction{
+				display: block;
+				text-transform: uppercase;
+				font-family: 'Poppins', sans-serif;
+				font-weight: 300;
+				line-height: 25px;
+				margin-bottom: 15px;
+				font-size: 14px;
+			}
+
+			p{
+				display: block;
+				font-family: 'Poppins', sans-serif;
+				font-weight: 300;
+				line-height: 25px;
+				margin-bottom: 15px;
+				font-size: 14px;
+			}
+
+			.content-faq{
+				.panel{
+					border-color: transparent;
+
+					.panel-heading{
+						background: $color-white;
+						padding: 15px 0px;
+
+						a{
+							.caret,
+							.title-collapse{
+								color: $mbz-green-2;
+							}
+						}
+					}
+
+					.panel-body{
+						padding: 15px 0px;
+
+						.content{
+							border-left: 3px solid #d6d6d6;
+							padding-left: 15px;
+
+							p{
+								width: 100%;
+								display: inline-block;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.sidebar-faq{
+			margin-top: 55px;
+			width: 100%;
+			display: inline-block;
+
+			.panel{
+				border-color: transparent;
+				background: $mbz-green-2;
+				margin-top: 0px;
+
+				.panel-heading{
+					background: transparent;
+					padding: 15px 0px;
+
+					a{
+						.title-collapse{
+							color: $color-white;
+						}
+					}
+				}
+
+				.panel-body{
+					padding: 15px 0px;
+					border-top-color: 0px;
+
+					ul{
+						padding-left: 0px;
+						margin-left: 20px;
+
+						li{
+							list-style: none;
+							margin-bottom: 10px;
+
+							a{
+								color: $color-white;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,45 @@
+.about-us{
+	background: url(../images/gallery/map.png) no-repeat center center,linear-gradient(to right,#080d17 0,#132036 100%);
+  background-size: cover,100%;
+
+	.box-information{
+		@extend .inline-block;
+	}
+
+	.box-list-team{
+		margin-bottom: 50px;
+		display: inline-block;
+		padding: 0 45px;
+
+		.box-list-team__image{
+			border-radius: 50%;
+			border: 5px solid $blue-2;
+			width: 160px;
+			height: 160px;
+			margin: auto;
+			margin-bottom: 20px;
+			overflow: hidden;
+			box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+
+			img{
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		.box-list-team__name{
+			font-family: $stack-muli;
+			font-weight: 700;
+			color: $white;
+			font-size: 25px;
+			margin-bottom: 10px;
+		}
+
+		.box-list-team__position{
+			font-family: $stack-muli;
+			font-weight: 300;
+			color: $yellow;
+			font-size: 17px;
+		}
+	}
+}

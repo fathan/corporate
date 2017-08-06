@@ -1,0 +1,208 @@
+.banner-information-top-wrapper{
+	background-color: $mbz-green-1;
+
+	.box-content{
+		width: 100%;
+		display: inline-block;
+		margin-top: 7.5em;
+
+		.title{
+			font-family: 'Poppins', sans-serif;
+      font-weight: 400;
+			font-size: 2.5em;
+			text-shadow: rgb(3, 3, 3) 1px 1px 1px;
+			color: $color-white;
+			margin-bottom: 20px;
+		}
+
+		.description{
+			line-height: 30px;
+			color: $color-white;
+			font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+			font-size: 16px;
+			margin-bottom: 35px;
+		}
+
+		.btn-default {
+		  color: #ffffff;
+		  font-size: 15px;
+		  font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+		  text-transform: uppercase;
+		  background-color: #1d9140;
+		  border-color: #1d9140;
+		  padding: 15px 30px;
+		}
+	}
+
+	.video-header-home {
+	  position: relative;
+	  padding-top: 25px;
+	  padding-bottom: 67.5%;
+	  height: 0;
+		
+		.body-carousel {
+		  box-sizing: border-box;
+      background: url(../images/gallery/macbookpro.png) center center no-repeat;
+      background-size: contain;
+      padding: 10.9% 12.5% 14.5%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      .carousel-mikrobiz{
+	    	display: inline-block;
+	      width: 100%;
+
+	    	.carousel-inner>.item{
+	    		overflow: hidden;
+	    		height: 300px;
+
+	    		.overlay{
+						position: absolute;
+						top: 0;
+						bottom: 0;
+						left: 0;
+						right: 0;
+						background-color: rgba(0, 0, 0, 0.42);
+						text-align: center;
+
+						.icon-play{
+							background: url(../images/gallery/play-button.png) no-repeat;
+							width: 64px;
+							height: 64px;
+							margin: auto;
+							margin-top: 9em;
+						}
+					}
+	    	}
+	    }
+		}
+	}
+}
+
+.about-us-wrapper{
+	width: 100%;
+	display: inline-block;
+}
+
+.service-wrapper{
+	width: 100%;
+	display: inline-block;
+
+	.title{
+		width: 100%;
+		display: inline-block;
+		text-align: center;
+
+		span{
+			font-family: 'Poppins', sans-serif;
+      font-weight: 400;
+      font-size: 22px;
+      color: $color-white;
+		}
+	}
+
+	hr{
+		width: 15em;
+		background-color: #FFFFFF;
+		margin-bottom: 30px;
+	}
+
+	.box-content{
+		width: 100%;
+		display: inline-block;
+		margin-bottom: 15px;
+
+		.icon{
+			width: 100px;
+			float: left;
+
+			img{
+				width: 100%;
+				height: auto;
+			}
+		}
+
+		.description{
+			width: 78%;
+			float: right;
+
+			p{
+				font-family: 'Poppins', sans-serif;
+				font-weight: 300;
+				line-height: 30px;
+				color: $color-white;
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+.testimonial-wrapper{
+	width: 100%;
+	display: inline-block;
+
+	.box-testimonial{
+		width: 100%;
+		display: inline-block;
+		text-align: center;
+		margin-top: 30px;
+
+		&:hover{
+			.img-avatar{
+				background-color: #FFFFFF;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				opacity: 0.6;
+			}
+		}
+
+		.img-avatar{
+			border-radius: 50%;
+			width: 150px;
+			height: 150px;
+			overflow: hidden;
+			margin: auto;
+			margin-bottom: 20px;
+			border: 1px solid #ececec;
+
+			img{
+				width: 100%;
+				height: auto;
+			}
+		}
+
+		.name{
+			font-size: 18px;
+			color: $color-black;
+			font-family: 'Poppins', sans-serif;
+      font-weight: 400;
+      margin-bottom: 10px;
+		}
+
+		.position{
+			font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-size: 14px;
+      color: $mbz-green-1;
+		}
+
+		hr{
+			width: 100px;
+		}
+
+		.description{
+			font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-size: 14px;
+      color: $color-black;
+      line-height: 30px;
+		}
+	}
+}

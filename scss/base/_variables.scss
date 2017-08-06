@@ -1,0 +1,41 @@
+// Descriptive color variables
+$white          : #FFFFFF;
+$black          : #000000;
+$grey           : #ECF0F1;
+$grey2          : #e1e5e6;
+$red-1					: #d32422;
+$red-2					: #c5211f;
+$red-3					: #b8061b;
+$red-4					: #a6071a;
+$yellow					: #f49304;
+$blue-light			: #d0eaf2;
+$blue-1					: #2C3E50;
+$blue-2					: #22313F;
+$blue-3					: #26394a;
+
+// Functional color variables
+
+$color-prim         :$yellow;
+$color-sec          :$blue-1;
+
+$color-text-light   :$white;
+$color-text-base    :$grey;
+$color-text-dark    :$blue-1;
+
+$color-border-light : lighten($grey, 35%);
+$color-border-dark  : $yellow;
+
+$color-link-default : $yellow;
+$color-link-visited : $blue-2;
+
+$color-shadow       : rgba($black,.8);
+$color-body         : $white;
+
+// Font stacks
+$stack-sans-serif : sans-serif;
+$stack-open-sans  : 'Open Sans', $stack-sans-serif;
+$stack-muli  : 'Muli', $stack-sans-serif;
+
+// Asset paths
+$path-img :"../images";
+$path-font:"../fonts";
