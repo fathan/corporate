@@ -1,23 +1,23 @@
 <template>
   <div id="app">
-    <Header></Header>
+    <appHeader></appHeader>
     <router-view></router-view>
-     <Footerintermezo></Footerintermezo>
-    <Footer></Footer>
+    <appFooterintermezo></appFooterintermezo>
+    <appFooter></appFooter>
   </div>
 </template>
 
 <script>
-import Header from '@/components/Header'
-import Footerintermezo from '@/components/Footerintermezo'
-import Footer from '@/components/Footer'
+import appHeader from '@/components/appHeader'
+import appFooterintermezo from '@/components/appFooterintermezo'
+import appFooter from '@/components/appFooter'
 
 export default {
   name: 'app',
   components: {
-    Header,
-    Footerintermezo,
-    Footer
+    appHeader,
+    appFooterintermezo,
+    appFooter
   }
 }
 </script>

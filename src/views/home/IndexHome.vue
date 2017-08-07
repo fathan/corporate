@@ -1,5 +1,5 @@
 <template>
-  <div id="IndexHome">
+  <div id="IndexHome" class="body--wrapper">
     <!-- BANNER TOP -->
     <section class="banner-top">
       <div class="banner-top__image-background">
@@ -13,12 +13,12 @@
               <div class="description">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus temporibus culpa alias architecto, blanditiis ex neque consequuntur quo, non inventore ab expedita tempora? Inventore error nulla, fuga. Voluptates, laboriosam, laborum!
               </div>
-              <a href="page-aboutus.php" class="btn btn-lg btn-default">
-                About Us
-              </a>
-              <a href="page-portofolio.php" class="btn btn-lg btn-danger">
+              <router-link :to="'about-us'" class="btn btn-lg btn-default">
+                Abut Us
+              </router-link>
+              <router-link :to="'portofolios'" class="btn btn-lg btn-danger">
                 Portofolio
-              </a>
+              </router-link>
             </div>
           </div>
         </div>
@@ -34,10 +34,10 @@
               </div>
             </div>
             <div class="pull-right">
-              <a href="page-portofolio.php" class="btn btn-lg btn-warning">
+              <router-link :to="'portofolios'" class="btn btn-lg btn-warning">
                 <i class="fa fa-eye"></i>
                 LIHAT SEMUA PORTOFOLIO
-              </a>
+              </router-link>
             </div>
           </div>
         </div>
@@ -123,15 +123,13 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-6" v-for="tech in technologies_desc">
                 <div class="point-wrapper__box-point">
                   <div class="image">
-                    <img src="static/images/gallery/internet/internet-1.png" alt="">
+                    <img :src="tech.img" alt="">
                   </div>
                   <div class="description">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, nihil accusantium.
-                    </p>
+                    <p>{{ tech.description }}</p>
                   </div>
                 </div>
               </div>
@@ -162,10 +160,10 @@
                   </div>
                 </div>
                 <br>
-                <a href="page-portofolio.php" class="btn btn-block btn-lg btn-warning">
-                  <span class="fa fa-eye"></span>
+                <router-link :to="'portofolios'" class="btn btn-block btn-lg btn-warning">
+                  <i class="fa fa-eye"></i>
                   LIHAT SEMUA PORTOFOLIO
-                </a>
+                </router-link>
               </div>
             </div>
           </div>
@@ -186,16 +184,16 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-3">
+          <div class="col-md-3" v-for="project in projects">
             <div class="list-portofolio">
               <div class="list-portofolio__image">
-                <img src="static/images/gallery/bg1.jpg" alt="">
+                <img :src="project.img">
                 <div class="box-description">
-                  <div class="title">
-                    Judul portofolio
-                  </div>
+                  <router-link :to="'portofolios/detail/3'" class="title">
+                    {{ project.title }}
+                  </router-link>
                   <div class="type">
-                    Type project
+                    {{ project.type }}
                   </div>
                 </div>
               </div>
@@ -207,10 +205,10 @@
             <div class="text-center">
               <br>
               <br>
-              <a href="page-portofolio.php" class="btn btn-lg btn-danger">
+              <router-link :to="'portofolios'" class="btn btn-lg btn-danger">
                 <i class="fa fa-eye"></i>
                 LIHAT SEMUA PORTOFOLIO
-              </a>
+              </router-link>
             </div>
           </div>
         </div>
@@ -225,7 +223,78 @@ export default {
   name: 'IndexHome',
   data () {
     return {
-      msg: ''
+      projects: [
+        {
+          id: 1,
+          img: 'static/images/gallery/bg1.jpg',
+          title: 'Judul portofolio',
+          type: 'Type portofolio'
+        },
+        {
+          id: 2,
+          img: 'static/images/gallery/bg1.jpg',
+          title: 'Judul portofolio',
+          type: 'Type portofolio'
+        },
+        {
+          id: 3,
+          img: 'static/images/gallery/bg1.jpg',
+          title: 'Judul portofolio',
+          type: 'Type portofolio'
+        },
+        {
+          id: 4,
+          img: 'static/images/gallery/bg1.jpg',
+          title: 'Judul portofolio',
+          type: 'Type portofolio'
+        },
+        {
+          id: 5,
+          img: 'static/images/gallery/bg1.jpg',
+          title: 'Judul portofolio',
+          type: 'Type portofolio'
+        },
+        {
+          id: 6,
+          img: 'static/images/gallery/bg1.jpg',
+          title: 'Judul portofolio',
+          type: 'Type portofolio'
+        },
+        {
+          id: 7,
+          img: 'static/images/gallery/bg1.jpg',
+          title: 'Judul portofolio',
+          type: 'Type portofolio'
+        },
+        {
+          id: 8,
+          img: 'static/images/gallery/bg1.jpg',
+          title: 'Judul portofolio',
+          type: 'Type portofolio'
+        }
+      ],
+      technologies_desc: [
+        {
+          id: 1,
+          img: 'static/images/gallery/internet/internet-1.png',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, nihil accusantium.'
+        },
+        {
+          id: 2,
+          img: 'static/images/gallery/internet/internet-1.png',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, nihil accusantium.'
+        },
+        {
+          id: 3,
+          img: 'static/images/gallery/internet/internet-1.png',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, nihil accusantium.'
+        },
+        {
+          id: 4,
+          img: 'static/images/gallery/internet/internet-1.png',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, nihil accusantium.'
+        }
+      ]
     }
   }
 }

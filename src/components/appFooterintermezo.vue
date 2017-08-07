@@ -15,10 +15,10 @@
               </div>
             </div>
             <div class="pull-right">
-              <a href="page-portofolio.php" class="btn btn-lg btn-danger">
+              <router-link :to="'portofolios'" class="btn btn-lg btn-danger">
                 <i class="fa fa-eye"></i>
                 LIHAT SEMUA PORTOFOLIO
-              </a>
+              </router-link>
             </div>
           </div>
         </div>
@@ -28,5 +28,5 @@
 </template>
 
 <script>
-	export default { name: 'Footerintermezo' }
+	export default { name: 'appFooterintermezo' }
 </script>

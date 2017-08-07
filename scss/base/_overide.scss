@@ -26,6 +26,12 @@
     padding-bottom: 30px;
     font-family: $stack-muli;
 		font-weight: 700;
+		border-bottom: 5px solid $red-1;
+
+		&.active {
+			color: $white;
+			border-bottom: 5px solid $yellow;
+		}
 
 	  &:hover{
 	  	color: #ad120d;

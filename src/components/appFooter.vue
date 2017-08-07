@@ -1,6 +1,6 @@
 <template>
-  <div id="Footer">
-    <footer class="footer-wrapper box-desc-social">
+  <div>
+    <div class="footer-wrapper box-desc-social">
       <div class="container">
         <div class="row">
           <div class="col-md-4">
@@ -60,8 +60,8 @@
           </div>
         </div>
       </div>
-    </footer>
-    <footer class="footer-corpyright">
+    </div>
+    <div class="footer-corpyright">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -69,10 +69,10 @@
           </div>
         </div>
       </div>
-    </footer>
+    </div>
   </div>
 </template>
 
 <script>
-export default { name: 'Footer' }
+export default { name: 'appFooter' }
 </script>

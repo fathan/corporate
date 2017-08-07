@@ -1,5 +1,5 @@
 <template>
-  <div id="IndexAbouts">
+  <div id="IndexAbouts" class="body--wrapper">
     <!-- SUB HEADER TOP -->
 		<section class="sub--header diagonal-shadow mg-bottom-diagonal">
 			<div class="container">
@@ -13,9 +13,9 @@
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi distinctio iusto sunt ducimus eos nesciunt impedit ex ipsam. Ratione necessitatibus, beatae nesciunt, excepturi error exercitationem. Maxime voluptatem, fugit laboriosam assumenda?
 							</div>
 							<br>
-							<a href="page-formulir-apply-project.php" class="btn btn-lg btn-warning">
-								Konsultasikan pada kami
-							</a>
+							<router-link :to="'apply-project'" class="btn btn-lg btn-warning">
+							  Konsultasikan pada kami
+							</router-link>
 						</div>
 					</div>
 				</div>
@@ -95,7 +95,7 @@
 								Fathan Rohman
 							</div>
 							<div class="box-list-team__position">
-								Frontend Developer - UI/UX Designer
+								Sr.Frontend Developer - UI/UX Designer
 							</div>
 						</div>
 						<div class="box-list-team">
@@ -106,7 +106,7 @@
 								Christian Tobing
 							</div>
 							<div class="box-list-team__position">
-								Pre Sales Manager
+								Bussines Development
 							</div>
 						</div>
 						<div class="box-list-team">

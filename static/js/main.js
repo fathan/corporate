@@ -12,11 +12,11 @@ $(document).ready(function () {
   // TARGET ON CLICK
   $(".jump-target").on("click", function( e ) {
     e.preventDefault();
-    $("body, html").animate({ 
-      scrollTop: $( $(this).attr('href') ).offset().top - 140
+    $("body, html").animate({
+      scrollTop: $( $(this).attr('data-target-jump') ).offset().top - 140
     }, 600);
   });
-	
+
   // BACK TO TOP
   if ($('#back-to-top').length) {
     var scrollTrigger = 100, // px
@@ -28,7 +28,7 @@ $(document).ready(function () {
         $('#back-to-top').removeClass('show');
       }
     };
-    
+
     backToTop();
     $(window).on('scroll', function () {
       backToTop();
@@ -41,9 +41,6 @@ $(document).ready(function () {
       }, 700);
     });
   }
-
-	// TOOLTIP
-	$('[data-toggle="tooltip"]').tooltip()
 
 	// SCROLL TO FIXED
 	$('#header-corporate').scrollToFixed();

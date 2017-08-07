@@ -1,6 +1,6 @@
 <template>
-  <div id="IndexApplyproject">
-    <section class="section--wrapper">
+  <div id="IndexApplyproject" class="body--wrapper">
+    	<section class="section--wrapper">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
@@ -25,8 +25,13 @@
 										<input type="text" class="form-control">
 									</div>
 									<div class="col-md-6">
-										<label for="#">Email Anda</label>
-										<input type="text" class="form-control">
+										<label for="email">Email</label>
+										<p :class="{ 'control': true }">
+											<input v-validate="'required|email'" :class="{'form-control': true, 'is-danger': errors.has('email') }" name="email" type="text" placeholder="Email">
+											<span v-show="errors.has('email')" class="help is-danger">
+												{{ errors.first('email') }}
+											</span>
+										</p>
 									</div>
 									<div class="col-md-6">
 										<label for="#">Dapat dari mana info kami</label>
@@ -71,6 +76,11 @@
 </template>
 
 <script>
+import Vue from 'vue'
+import VeeValidate from 'vee-validate'
+
+Vue.use(VeeValidate)
+
 export default {
   name: 'IndexApplyproject',
   data () {

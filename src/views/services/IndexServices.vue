@@ -1,5 +1,5 @@
 <template>
-  <div id="IndexServices">
+  <div id="IndexServices" class="body--wrapper">
     <!-- SUB HEADER TOP -->
 		<section class="sub--header">
 			<div class="container">
@@ -13,9 +13,9 @@
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi distinctio iusto sunt ducimus eos nesciunt impedit ex ipsam. Ratione necessitatibus, beatae nesciunt, excepturi error exercitationem. Maxime voluptatem, fugit laboriosam assumenda?
 							</div>
 							<br>
-							<a href="page-formulir-apply-project.php" class="btn btn-lg btn-warning">
-								Konsultasikan pada kami
-							</a>
+              <router-link :to="'apply-project'" class="btn btn-lg btn-warning">
+							  Konsultasikan pada kami
+							</router-link>
 						</div>
 					</div>
 				</div>
@@ -30,25 +30,25 @@
 						<div class="box-list-nav">
 							<ul>
 								<li>
-									<a class="jump-target" href="#bussinessprocess">Bussines Proces</a>
+									<a class="jump-target" data-target-jump="#bussinessprocess">Bussines Proces</a>
 								</li>
 								<li>
-									<a class="jump-target" href="#company-profile">Company Profile</a>
+									<a class="jump-target" data-target-jump="#company-profile">Company Profile</a>
 								</li>
 								<li>
-									<a class="jump-target" href="#ecommerce">E-Commerce</a>
+									<a class="jump-target" data-target-jump="#ecommerce">E-Commerce</a>
 								</li>
 								<li>
-									<a class="jump-target" href="#sisteminformasi">Sistem Informasi</a>
+									<a class="jump-target" data-target-jump="#sisteminformasi">Sistem Informasi</a>
 								</li>
 								<li>
-									<a class="jump-target" href="#buildstartup">Build Start Up</a>
+									<a class="jump-target" data-target-jump="#buildstartup">Build Start Up</a>
 								</li>
 								<li>
-									<a class="jump-target" href="#webapplication">Web App</a>
+									<a class="jump-target" data-target-jump="#webapplication">Web App</a>
 								</li>
 								<li class="tech">
-									<a class="jump-target" href="#technologies">Technologies</a>
+									<a class="jump-target" data-target-jump="#technologies">Technologies</a>
 								</li>
 							</ul>
 						</div>
