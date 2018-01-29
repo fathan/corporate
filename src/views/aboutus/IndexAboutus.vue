@@ -27,13 +27,13 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-						<div class="box-information">
+						<div class="box-information" v-if="about_us">
 							<div class="title--top">
 								<div class="title">
-									about us
+									{{ about_us.title }}
 								</div>
 								<div class="description">
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo dolore ipsum, autem ipsa est doloribus iure necessitatibus impedit explicabo optio nihil assumenda velit dignissimos vel, sapiente aperiam voluptatibus accusantium eius.
+									{{ about_us.short_desc }}
 								</div>
 							</div>
 						</div>
@@ -65,81 +65,15 @@
 				</div>
 				<div class="row text-center">
 					<div class="col-md-12">
-						<div class="box-list-team">
+						<div class="box-list-team" v-for="t in team" v-bind:key="t.name">
 							<div class="box-list-team__image">
-								<img src="static/images/team/lutfi.jpg" alt="">
+								<img :src='t.foto_url' alt="">
 							</div>
 							<div class="box-list-team__name">
-								Lutfi Satria Ramdhani
+								{{ t.name }}
 							</div>
 							<div class="box-list-team__position">
-								Sistem Analis
-							</div>
-						</div>
-						<div class="box-list-team">
-							<div class="box-list-team__image">
-								<img src="static/images/team/febry.jpg" alt="">
-							</div>
-							<div class="box-list-team__name">
-								Febryan Setiawan
-							</div>
-							<div class="box-list-team__position">
-								Sr.Backend Developer
-							</div>
-						</div>
-						<div class="box-list-team">
-							<div class="box-list-team__image">
-								<img src="static/images/team/fathan.jpg" alt="">
-							</div>
-							<div class="box-list-team__name">
-								Fathan Rohman
-							</div>
-							<div class="box-list-team__position">
-								Sr.Frontend Developer - UI/UX Designer
-							</div>
-						</div>
-						<div class="box-list-team">
-							<div class="box-list-team__image">
-								<img src="static/images/team/chris.jpg" alt="">
-							</div>
-							<div class="box-list-team__name">
-								Christian Tobing
-							</div>
-							<div class="box-list-team__position">
-								Bussines Development
-							</div>
-						</div>
-						<div class="box-list-team">
-							<div class="box-list-team__image">
-								<img src="static/images/team/farry.jpg" alt="">
-							</div>
-							<div class="box-list-team__name">
-								Farry Abimael Argobie
-							</div>
-							<div class="box-list-team__position">
-								Sr.Fullstack Developer
-							</div>
-						</div>
-						<div class="box-list-team">
-							<div class="box-list-team__image">
-								<img src="static/images/team/jos.jpg" alt="">
-							</div>
-							<div class="box-list-team__name">
-								Ramdhani Haris
-							</div>
-							<div class="box-list-team__position">
-								Frontend Developer
-							</div>
-						</div>
-						<div class="box-list-team">
-							<div class="box-list-team__image">
-								<img src="static/images/team/audi.jpg" alt="">
-							</div>
-							<div class="box-list-team__name">
-								Audi Irawan
-							</div>
-							<div class="box-list-team__position">
-								Mobile Developer
+								{{ t.position }}
 							</div>
 						</div>
 					</div>
@@ -155,8 +89,31 @@ export default {
   name: 'IndexAboutus',
   data () {
     return {
-      msg: 'Index about'
+      about_us: {},
+      team: []
     }
+  },
+  created () {
+    let options = {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+        'Api-Key': 'dhiDH@AWIAWDWd&7wd7q8wqyddwjqkhq67612836178sdqydq='
+      }
+    }
+
+    let body = new FormData()
+    body.append('security_key', 'NjZhYzFiZTNhZDI2Yzc3MGUyMWVkOGUwNGQzNzFlMzJkZDBkNTZmNw==')
+
+    this.axios
+      .post('http://dev.lusaraproject.com/api/about_us', body, options)
+      .then((response) => {
+        console.log(response.data)
+        this.about_us = response.data.about_us
+        this.team = response.data.team
+      })
+      .catch((error) => {
+        console.log(error)
+      })
   }
 }
 </script>

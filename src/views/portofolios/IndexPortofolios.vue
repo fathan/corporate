@@ -35,16 +35,16 @@
 					</div>
 				</div>
 				<div class="row">
-          <div class="col-md-3" v-for="project in projects">
+          <div class="col-md-3" v-for="project in portofolio" v-bind:key="project.id">
             <div class="list-portofolio">
               <div class="list-portofolio__image">
-                <img :src="project.img">
+                <img :src="project.client_logo_url">
                 <div class="box-description">
                   <router-link :to="'portofolios/detail/3'" class="title">
                     {{ project.title }}
                   </router-link>
                   <div class="type">
-                    {{ project.type }}
+                    {{ project.client_name }}
                   </div>
                 </div>
               </div>
@@ -62,57 +62,29 @@ export default {
   name: 'IndexPortofolios',
   data () {
     return {
-      projects: [
-        {
-          id: 1,
-          img: 'static/images/gallery/bg1.jpg',
-          title: 'Judul portofolio',
-          type: 'Type portofolio'
-        },
-        {
-          id: 2,
-          img: 'static/images/gallery/bg1.jpg',
-          title: 'Judul portofolio',
-          type: 'Type portofolio'
-        },
-        {
-          id: 3,
-          img: 'static/images/gallery/bg1.jpg',
-          title: 'Judul portofolio',
-          type: 'Type portofolio'
-        },
-        {
-          id: 4,
-          img: 'static/images/gallery/bg1.jpg',
-          title: 'Judul portofolio',
-          type: 'Type portofolio'
-        },
-        {
-          id: 5,
-          img: 'static/images/gallery/bg1.jpg',
-          title: 'Judul portofolio',
-          type: 'Type portofolio'
-        },
-        {
-          id: 6,
-          img: 'static/images/gallery/bg1.jpg',
-          title: 'Judul portofolio',
-          type: 'Type portofolio'
-        },
-        {
-          id: 7,
-          img: 'static/images/gallery/bg1.jpg',
-          title: 'Judul portofolio',
-          type: 'Type portofolio'
-        },
-        {
-          id: 8,
-          img: 'static/images/gallery/bg1.jpg',
-          title: 'Judul portofolio',
-          type: 'Type portofolio'
-        }
-      ]
+      portofolio: []
     }
+  },
+  created () {
+    let options = {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+        'Api-Key': 'dhiDH@AWIAWDWd&7wd7q8wqyddwjqkhq67612836178sdqydq='
+      }
+    }
+
+    let body = new FormData()
+    body.append('security_key', 'NjZhYzFiZTNhZDI2Yzc3MGUyMWVkOGUwNGQzNzFlMzJkZDBkNTZmNw==')
+
+    this.axios
+      .post('http://dev.lusaraproject.com/api/portfolio', body, options)
+      .then((response) => {
+        console.log(response.data)
+        this.portofolio = response.data
+      })
+      .catch((error) => {
+        console.log(error)
+      })
   }
 }
 </script>

@@ -123,13 +123,14 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-6" v-for="tech in technologies_desc">
+              <div class="col-md-6">
                 <div class="point-wrapper__box-point">
                   <div class="image">
-                    <img :src="tech.img" alt="">
+                    <!-- <img :src="tech.img" alt=""> -->
+                    <img src="" alt="">
                   </div>
                   <div class="description">
-                    <p>{{ tech.description }}</p>
+                    <p>Lorem ipsum dolor sit amet</p>
                   </div>
                 </div>
               </div>
@@ -184,16 +185,16 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-3" v-for="project in projects">
+          <div class="col-md-3" v-for="project in lates_project" v-bind:key="project.id">
             <div class="list-portofolio">
               <div class="list-portofolio__image">
-                <img :src="project.img">
+                <img :src="project.client_logo_url">
                 <div class="box-description">
                   <router-link :to="'portofolios/detail/3'" class="title">
                     {{ project.title }}
                   </router-link>
                   <div class="type">
-                    {{ project.type }}
+                    {{ project.client_name }}
                   </div>
                 </div>
               </div>
@@ -223,79 +224,31 @@ export default {
   name: 'IndexHome',
   data () {
     return {
-      projects: [
-        {
-          id: 1,
-          img: 'static/images/gallery/bg1.jpg',
-          title: 'Judul portofolio',
-          type: 'Type portofolio'
-        },
-        {
-          id: 2,
-          img: 'static/images/gallery/bg1.jpg',
-          title: 'Judul portofolio',
-          type: 'Type portofolio'
-        },
-        {
-          id: 3,
-          img: 'static/images/gallery/bg1.jpg',
-          title: 'Judul portofolio',
-          type: 'Type portofolio'
-        },
-        {
-          id: 4,
-          img: 'static/images/gallery/bg1.jpg',
-          title: 'Judul portofolio',
-          type: 'Type portofolio'
-        },
-        {
-          id: 5,
-          img: 'static/images/gallery/bg1.jpg',
-          title: 'Judul portofolio',
-          type: 'Type portofolio'
-        },
-        {
-          id: 6,
-          img: 'static/images/gallery/bg1.jpg',
-          title: 'Judul portofolio',
-          type: 'Type portofolio'
-        },
-        {
-          id: 7,
-          img: 'static/images/gallery/bg1.jpg',
-          title: 'Judul portofolio',
-          type: 'Type portofolio'
-        },
-        {
-          id: 8,
-          img: 'static/images/gallery/bg1.jpg',
-          title: 'Judul portofolio',
-          type: 'Type portofolio'
-        }
-      ],
-      technologies_desc: [
-        {
-          id: 1,
-          img: 'static/images/gallery/internet/internet-1.png',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, nihil accusantium.'
-        },
-        {
-          id: 2,
-          img: 'static/images/gallery/internet/internet-1.png',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, nihil accusantium.'
-        },
-        {
-          id: 3,
-          img: 'static/images/gallery/internet/internet-1.png',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, nihil accusantium.'
-        },
-        {
-          id: 4,
-          img: 'static/images/gallery/internet/internet-1.png',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, nihil accusantium.'
-        }
-      ]
+      about_us: [],
+      lates_project: []
     }
+  },
+  created () {
+    let options = {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+        'Api-Key': 'dhiDH@AWIAWDWd&7wd7q8wqyddwjqkhq67612836178sdqydq='
+      }
+    }
+
+    let body = new FormData()
+    body.append('security_key', 'NjZhYzFiZTNhZDI2Yzc3MGUyMWVkOGUwNGQzNzFlMzJkZDBkNTZmNw==')
+
+    this.axios
+      .post('http://dev.lusaraproject.com/api/dashboard', body, options)
+      .then((response) => {
+        console.log(response.data)
+        this.lates_project = response.data.lates_project
+        this.about_us = response.data.about_us
+      })
+      .catch((error) => {
+        console.log(error)
+      })
   }
 }
 </script>

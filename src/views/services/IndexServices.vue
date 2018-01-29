@@ -249,8 +249,39 @@ export default {
   name: 'IndexServices',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      our_services: [],
+      teknologi: []
     }
+  },
+  created () {
+    let _self = this
+    let options = {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+        'Api-Key': 'dhiDH@AWIAWDWd&7wd7q8wqyddwjqkhq67612836178sdqydq='
+      }
+    }
+
+    let body = new FormData()
+    body.append('security_key', 'NjZhYzFiZTNhZDI2Yzc3MGUyMWVkOGUwNGQzNzFlMzJkZDBkNTZmNw==')
+
+    _self.axios.all([
+      _self.axios.post('http://dev.lusaraproject.com/api/dashboard', body, options),
+      _self.axios.post('http://dev.lusaraproject.com/api/services', body, options)
+    ])
+    .then(
+      _self.axios.spread(
+        (dashboard, service) => {
+          console.log(dashboard.data.teknologi)
+          console.log(service.data.our_services)
+          _self.teknologi = dashboard.data.teknologi
+          _self.our_services = service.data.our_services
+        }
+      )
+    )
+    .catch((error) => {
+      console.log(error)
+    })
   }
 }
 </script>

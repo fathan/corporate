@@ -27,4 +27,8 @@ npm run e2e
 npm test
 ```
 
+## Screenshoot
+
+![alt text](static/images/gallery/screenshoot-corporate-sample.png)
+
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
